@@ -53,7 +53,7 @@ const EachPages = ({page}) =>{
                 </div>
                 <div className="flexbox">
                     <div style={{marginLeft: '115px'}} className="pictext">遊戲 QRCode</div>
-                    <div style={{marginLeft: '52px'}} className="pictext">角色差分圖</div>
+                    <div style={{marginLeft: '52px'}} className="pictext">角色心情差分圖</div>
                 </div>
             </div>;
             break;
