@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+.eachpage{
+    width: 182mm;
+    height: 257mm;
+    background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #333;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bookpage{
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.paper{
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paper .title{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 32px 0 10px 0;
 }
+
+.paper .block{
+    margin: 0 55px ;
+    height: 154px;
+}
+
+.paper .vertical{
+    text-orientation: upright;
+    float: right;
+}
+
+.paper .subtitle{
+    font-size: 20px;
+    font-weight: bold;
+    height: 154px;
+    text-align: center;
+}
+
+.paper .sidepic{
+    margin-top: 10px;
+    height: 135px;
+    text-align: center;
+}
+
+.paper .text{
+    font-size: 15px;
+    line-height: 1.55;
+    height: 154px;
+    margin: 0 12px;
+}
+
+.paper .titleline{
+    margin: 0 8px;
+    border: 2px solid #111;
+    border-radius: 100px;
+}
+
+
+.paper .blockline{
+    margin: 22px 45px;
+    border: 1.5px solid #111;
+    border-radius: 100px;
+}
+
+.paper .pictext{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.paper .flexbox{
+    display: flex;
+}
+
+.paper .flexbox div{
+    flex: 1;
+}
+
