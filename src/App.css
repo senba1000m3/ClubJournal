@@ -15,7 +15,8 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    margin-left: 450px;
+    justify-content: center;
+    //margin-left: 450px;
     align-items: center
 }
 
@@ -27,6 +28,7 @@ body{
     height: 257mm;
     background-color: transparent;
     transform-origin: right;
+    transition: 2s;
     perspective: 1200px;
 }
 
