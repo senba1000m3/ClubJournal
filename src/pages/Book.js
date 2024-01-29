@@ -9,31 +9,29 @@ const Book = () =>{
 
     return (
         <div className="book">
-            <div className="bookpage" style={{transform: test ? 'rotateY(180deg)' : 'rotateY(0deg)'}}>
-                <motion.div layout className="pagebox" style={{transform: test ? 'rotateY(180deg)' : 'rotateY(0deg)', zIndex: 1}}
+            <div className="bookpage" >
+                <motion.div layout className="pagebox"
+                            style={{transform: test2 ? 'rotateY(180deg)' : 'rotateY(0deg)', zIndex: test2 ? 2 : 2}}
                             onClick={() => {
-                                setTest(!test);
-                                console.log("hi");
+                                setTest2(!test2);
                             }}>
                     <div className="frontpage">
-                        <EachPages page={2}/>
+                        <img src="/ClubJournal/pic/iriya.png" style={{width: '182mm', height: '257mm'}}/>
                     </div>
                     <div className="backpage">
                         <EachPages page={1}/>
                     </div>
                 </motion.div>
-            </div>
-            <div className="bookpage">
-                <motion.div layout className="pagebox" style={{transform: test2 ? 'rotateY(180deg)' : 'rotateY(0deg)', zIndex: 2}}
+                <motion.div layout className="pagebox"
+                            style={{transform: test ? 'rotateY(180deg)' : 'rotateY(0deg)', zIndex: test ? 3 : 1}}
                             onClick={() => {
-                                setTest2(!test2);
-                                console.log("hi");
+                                setTest(!test);
                             }}>
                     <div className="frontpage">
-                        <img src="/ClubJournal/pic/iriya.png" style={{width: '182mm', height:'257mm'}}/>
+                        <EachPages page={2}/>
                     </div>
                     <div className="backpage">
-                        <EachPages page={1}/>
+                        <div style={{width: '182mm', height: '257mm', backgroundColor:"white"}}/>
                     </div>
                 </motion.div>
             </div>
