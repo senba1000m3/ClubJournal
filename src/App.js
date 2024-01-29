@@ -7,9 +7,11 @@ import SiteRoutes from "./pages/SiteRoutes";
 
 function App() {
   return (
-      <Router basename="/ClubJournal">
-        <SiteRoutes/>
-      </Router>
+      <div className="sitesize">
+          <Router basename="/ClubJournal">
+            <SiteRoutes/>
+          </Router>
+      </div>
   );
 }
 

@@ -1,3 +1,44 @@
+@media(max-width: 2560px) {
+    .sitesize {
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 1920px) {
+    .sitesize {
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 1680px) {
+    .sitesize {
+        transform: scale(0.7);
+    }
+}
+
+@media(max-width: 1440px) {
+    .sitesize {
+        transform: scale(0.5);
+    }
+}
+
+@media(max-width: 960px) {
+    .sitesize {
+        transform: scale(0.4);
+    }
+}
+
+@media(max-width: 540px) {
+    .sitesize {
+        transform: scale(0.3);
+    }
+}
+
+@media(max-width: 360px) {
+    .sitesize {
+    }
+}
+
 .eachpage{
     width: 182mm;
     height: 257mm;
