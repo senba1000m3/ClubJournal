@@ -27,7 +27,6 @@ body{
     height: 257mm;
     background-color: transparent;
     transform-origin: right;
-    transition: 2s;
     perspective: 1200px;
 }
 
