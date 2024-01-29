@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ClubJournal/static/css/main.0d1fba42.css",
-    "main.js": "/ClubJournal/static/js/main.bbd5cda3.js",
+    "main.js": "/ClubJournal/static/js/main.ec76782d.js",
     "static/js/787.b2868ad3.chunk.js": "/ClubJournal/static/js/787.b2868ad3.chunk.js",
     "index.html": "/ClubJournal/index.html",
     "main.0d1fba42.css.map": "/ClubJournal/static/css/main.0d1fba42.css.map",
-    "main.bbd5cda3.js.map": "/ClubJournal/static/js/main.bbd5cda3.js.map",
+    "main.ec76782d.js.map": "/ClubJournal/static/js/main.ec76782d.js.map",
     "787.b2868ad3.chunk.js.map": "/ClubJournal/static/js/787.b2868ad3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d1fba42.css",
-    "static/js/main.bbd5cda3.js"
+    "static/js/main.ec76782d.js"
   ]
 }
