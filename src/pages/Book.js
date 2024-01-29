@@ -35,22 +35,20 @@ const Book = () => {
         <div className="book">
             <div className="bookpage" style={{marginLeft: nowPage[1] ? '-800px':'0px'}}>
                 <FlipPage pageIndex={1}
-                          front={<img src="/ClubJournal/pic/iriya.png" style={{width: '182mm', height: '257mm'}}/>}
+                          front={<img src="/ClubJournal/pic/frontcover.png" style={{width: '182mm', height: '257mm'}}/>}
                           back={<EachPages page={1}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
-                {Array.from({ length: 5 }, (_, index) => (
+                {Array.from({ length: 3 }, (_, index) => (
                     <FlipPage key = {index} pageIndex={index+2}
                               front={<EachPages page={2}/>}
                               back={<EachPages page={1}/>}
                               nowPage={nowPage} setNowPage={setNowPage}
                     />
                 ))}
-                <FlipPage pageIndex={7}
+                <FlipPage pageIndex={5}
                           front={<EachPages page={2}/>}
-                          back={<div style={{width: '182mm', height: '257mm', backgroundColor: "white", display: "flex", justifyContent: "center"}}>
-                              <a style={{position: "absolute", bottom: '12px', fontSize: '24px'}}>© 2024 Senba</a>
-                          </div>}
+                          back={<img src="/ClubJournal/pic/backcover.png" style={{width: '182mm', height: '257mm'}}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
             </div>
@@ -60,3 +58,7 @@ const Book = () => {
 }
 
 export default Book;
+
+/*<div style={{width: '182mm', height: '257mm', backgroundColor: "white", display: "flex", justifyContent: "center"}}>
+    <a style={{position: "absolute", bottom: '12px', fontSize: '24px'}}>© 2024 Senba</a>
+</div>*/
