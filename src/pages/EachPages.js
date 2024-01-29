@@ -3,7 +3,7 @@ import TextBlock from "./TextBlock";
 
 const EachPages = ({page}) =>{
     let nowPageContent = <div/>;
-    console.log(process.env.PUBLIC_URL);
+
     switch (page) {
         case 1:
             nowPageContent = <div>
