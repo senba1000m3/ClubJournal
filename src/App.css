@@ -52,6 +52,37 @@ body{
     padding: 0;
 }
 
+.bookshelf{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.bookshelf .books{
+    display: block;
+    position: absolute;
+    width: 190px;
+    height: auto;
+    transform-origin: center;
+    transform: rotateX(25deg);
+    box-shadow: 2px 8px 7px 3px rgba(0, 0, 0, 0.7);
+}
+
+.bookshelf .books:hover{
+    transform: scale(1.04) rotateX(25deg);
+    //border: 5px solid rgba(255, 255, 255, 1);
+}
+
+.bookshelf .text{
+    position: absolute;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*書本內容*/
 .book{
     width: 100vw;
     height: 100vh;
@@ -80,6 +111,7 @@ body{
     transform-origin: right;
     transition: 2s;
     transform-style: preserve-3d;
+    border: 1px solid black;
 }
 
 .backpage{
@@ -95,6 +127,20 @@ body{
 }
 
 /**/
+
+.book button{
+    width: 190px;
+    height: 80px;
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-left: 450px;
+    margin-top: 900px;
+    border: 5px solid darkslateblue;
+    background-color: #e2d3ff;
+    color: #10001f;
+    border-radius: 20px;
+}
 
 .paper{
     position: relative;
@@ -126,8 +172,7 @@ body{
 }
 
 .paper .sidepic{
-    margin-top: 10px;
-    height: 135px;
+    margin-top: 6px;
     text-align: center;
 }
 
@@ -140,14 +185,14 @@ body{
 
 .paper .titleline{
     margin: 0 8px;
-    border: 2px solid #111;
+    border: 1.5px solid #111;
     border-radius: 100px;
 }
 
 
 .paper .blockline{
-    margin: 22px 45px;
-    border: 1.5px solid #111;
+    margin: 22.5px 45px;
+    border: 1px solid #111;
     border-radius: 100px;
 }
 
@@ -163,4 +208,3 @@ body{
 .paper .flexbox div{
     flex: 1;
 }
-

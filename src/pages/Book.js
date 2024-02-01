@@ -3,8 +3,10 @@ import TextBlock from "./TextBlock";
 import EachPages from "./EachPages";
 import {motion} from "framer-motion";
 import {Route} from "react-router-dom";
+import {returnCover, viewBook} from "./AnimationSet";
 
 const FlipPage = ({pageIndex, front, back, nowPage, setNowPage}) => {
+    const flipaudio = new Audio('/ClubJournal/sound/flip.mp3');
 
     return (
         <motion.div layout className="pagebox"
@@ -18,6 +20,8 @@ const FlipPage = ({pageIndex, front, back, nowPage, setNowPage}) => {
                             newNowPage[pageIndex] = !nowPage[pageIndex];
                             return newNowPage;
                         });
+
+                        flipaudio.play();
                     }}>
             <div className="frontpage">
                 {front}
@@ -29,30 +33,43 @@ const FlipPage = ({pageIndex, front, back, nowPage, setNowPage}) => {
     );
 }
 const Book = () => {
+    const flipaudio = new Audio('/ClubJournal/sound/flip.mp3');
     const [nowPage, setNowPage] = useState([false]);
 
     return (
-        <div className="book">
-            <div className="bookpage" style={{marginLeft: nowPage[1] ? '-800px':'0px'}}>
+        <motion.div variants={viewBook} initial="initial" animate="animate" exit="exit" className="book">
+            <div className="bookpage" style={{marginLeft: nowPage[1] ? '-800px' : '0px'}}>
                 <FlipPage pageIndex={1}
                           front={<img src="/ClubJournal/pic/frontcover.png" style={{width: '182mm', height: '257mm'}}/>}
+                          back={<EachPages page={0}/>}
+                          nowPage={nowPage} setNowPage={setNowPage}
+                />
+                <FlipPage pageIndex={2}
+                          front={<img src="/ClubJournal/pic/nijigakugo/poster.png" style={{width: '182mm', height: '257mm'}}/>}
+                          back={<EachPages page={3}/>}
+                          nowPage={nowPage} setNowPage={setNowPage}
+                />
+                <FlipPage pageIndex={3}
+                          front={<EachPages page={4}/>}
                           back={<EachPages page={1}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
-                {Array.from({ length: 3 }, (_, index) => (
-                    <FlipPage key = {index} pageIndex={index+2}
-                              front={<EachPages page={2}/>}
-                              back={<EachPages page={1}/>}
-                              nowPage={nowPage} setNowPage={setNowPage}
-                    />
-                ))}
-                <FlipPage pageIndex={5}
+                <FlipPage pageIndex={4}
                           front={<EachPages page={2}/>}
                           back={<img src="/ClubJournal/pic/backcover.png" style={{width: '182mm', height: '257mm'}}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
+                {Array.from({length: 0}, (_, index) => (
+                    <FlipPage key={index} pageIndex={index + 4}
+                              front={<EachPages page={4}/>}
+                              back={<EachPages page={3}/>}
+                              nowPage={nowPage} setNowPage={setNowPage}
+                    />
+                ))}
+                {nowPage[4] === true && <motion.button variants={returnCover} onClick={() =>{
+                    setNowPage([false]);flipaudio.play();}}>回到封面</motion.button>}
             </div>
-        </div>
+        </motion.div>
 
     );
 }
