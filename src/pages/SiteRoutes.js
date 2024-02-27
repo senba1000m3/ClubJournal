@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {Outlet, Route, Routes, useLocation} from "react-router-dom";
+import React from "react";
+import {Route, Routes, useLocation} from "react-router-dom";
 import {AnimatePresence} from "framer-motion";
-import Book from "./Book";
 import EachPages from "./EachPages";
 import Homepage from "./Homepage";
+import Book from "./Book";
 
 const SiteRoutes = () => {
     const location = useLocation();

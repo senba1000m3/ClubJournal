@@ -37,19 +37,19 @@ const EachPages = ({page}) =>{
                            text={["遊戲共有五個,分別是一個真結局,兩個普通結局,與兩個壞結局,會根據玩家的四項數值與最後所選的選項發生變化。其中,真結局的選項需要玩家在兩項數值都提升到一定程度時才會被解鎖,需要縝密的計算,均衡的提升各項數值。"]}
                            img="/ClubJournal/pic/5.png" mode={1} mark={1}/>
                 <div className="blockline"/>
-                <img src="/ClubJournal/pic/nagare.png" style={{width: '580px', margin: '20px 0 20px 52px'}}
+                <img src="/ClubJournal/pic/nagare.png" alt="" style={{width: '580px', margin: '20px 0 20px 52px'}}
                      id="nagare"/>
                 <br/>
                 <div style={{marginLeft: '230px'}} className="pictext">遊戲（部分）流程圖</div>
                 <div className="blockline" style={{marginTop: '30px'}}/>
                 <div className="flexbox">
                     <div>
-                        <img src="/ClubJournal/pic/gamelink.png"
+                        <img src="/ClubJournal/pic/gamelink.png" alt=""
                              style={{width: '300px', marginLeft: '40px', marginTop: '0px'}}/><br/>
                     </div>
                     <div>
-                        <img src="/ClubJournal/pic/chara.png" style={{width: '200px', marginLeft: '-10px'}}/>
-                        <img src="/ClubJournal/pic/chara2.png" style={{width: '200px', marginLeft: '-50px'}}/>
+                        <img src="/ClubJournal/pic/chara.png" alt="" style={{width: '200px', marginLeft: '-10px'}}/>
+                        <img src="/ClubJournal/pic/chara2.png" alt="" style={{width: '200px', marginLeft: '-50px'}}/>
                     </div>
                 </div>
                 <div className="flexbox" style={{marginTop: "3px"}}>
@@ -71,7 +71,7 @@ const EachPages = ({page}) =>{
                 }}>作者：千羽
                 </div>
                 <div style={{display: "flex", justifyContent: "center", marginBottom: '35px'}}>
-                    <img src="/ClubJournal/pic/nijigakugo/nijigaku.png" style={{width: '580px'}}/>
+                    <img src="/ClubJournal/pic/nijigakugo/nijigaku.png" alt="" style={{width: '580px'}}/>
                 </div>
                 <TextBlock title="遊戲介紹"
                            text={["這是一款基於知名動畫Lovelive的旗下企劃:虹咲學園學園偶像同好會所製作的粉絲向二創遊戲。",
@@ -95,11 +95,11 @@ const EachPages = ({page}) =>{
                     text={["遊戲目前共有十關,分別是八個普通關卡與兩個BOSS關卡,每關都有獨特的玩法與豐富的角色插圖、場景美術。"]}
                     mode={1} mark={1} height="330px"/>
                 <div style={{position: "absolute", top: '25px', left: '40px'}}>
-                    <img src="/ClubJournal/pic/nijigakugo/chara.png" style={{width: '450px'}}/>
+                    <img src="/ClubJournal/pic/nijigakugo/chara.png" alt="" style={{width: '450px'}}/>
                 </div>
                 <div style={{position: "absolute", top: '235px', left: '40px'}}>
-                    <img src="/ClubJournal/pic/nijigakugo/bg2.png" style={{width: '220px', marginRight: '20px'}}/>
-                    <img src="/ClubJournal/pic/nijigakugo/bg.png" style={{width: '220px'}}/>
+                    <img src="/ClubJournal/pic/nijigakugo/bg2.png" alt="" style={{width: '220px', marginRight: '20px'}}/>
+                    <img src="/ClubJournal/pic/nijigakugo/bg.png" alt="" style={{width: '220px'}}/>
                 </div>
                 <div className="blockline"/>
                 <TextBlock title="AyumuCatch關卡介紹" text={["「大家，我回來了」,台上的少女如此說著。與臉上開心的笑容成對比,在那背後卻像是一副寂寞的表情,似乎在等待著什麼。正當大家仍對此感到疑惑,「歡迎回來!」的話音還未落下 ,取而代之的是從天而降的迷之飛碟,與那不知從何萌生的執念與重力場。",
@@ -109,11 +109,11 @@ const EachPages = ({page}) =>{
                 <div className="blockline"/>
                 <div className="flexbox" style={{marginTop: '32px'}}>
                     <div>
-                        <img src="/ClubJournal/pic/nijigakugo/gamelink.png"
+                        <img src="/ClubJournal/pic/nijigakugo/gamelink.png" alt=""
                              style={{height: '200px', marginLeft: '55px', marginTop: '0px'}}/><br/>
                     </div>
                     <div>
-                        <img src="/ClubJournal/pic/nijigakugo/gamescene.png"
+                        <img src="/ClubJournal/pic/nijigakugo/gamescene.png" alt=""
                              style={{height: '185px', marginLeft: '-40px', marginTop: '8px'}}/>
                     </div>
                 </div>
@@ -122,6 +122,8 @@ const EachPages = ({page}) =>{
                     <div style={{marginLeft: '8px'}} className="pictext">實際遊玩畫面</div>
                 </div>
             </div>
+            break;
+        default:
             break;
     }
     return (

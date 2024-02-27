@@ -1,6 +1,4 @@
-import React, {useState} from "react";
-import {Route} from "react-router-dom";
-import EachPages from "./EachPages";
+import React from "react";
 
 const TextBlock = ({title="", text=[""], img="", mode=1, mark=0, size="140px",height="154px"}) => {
     let content;
@@ -8,7 +6,7 @@ const TextBlock = ({title="", text=[""], img="", mode=1, mark=0, size="140px",he
     const DecideMark = ({value}) =>{
         switch (mark){
             case 1:
-                return <div>&emsp;&emsp;{value}</div>;
+                return <div><span style={{color: "transparent"}}>留白</span>{value}</div>;
             case 2:
                 return <div>•{value}</div>;
             default:
@@ -30,7 +28,7 @@ const TextBlock = ({title="", text=[""], img="", mode=1, mark=0, size="140px",he
                         ))}
                     </div>
 
-                    {img && <img src={img} className="sidepic" style={{float: 'left', height: size}}/>}
+                    {img && <img src={img} alt="" className="sidepic" style={{float: 'left', height: size}}/>}
                 </div>
             );
             break;
@@ -38,7 +36,7 @@ const TextBlock = ({title="", text=[""], img="", mode=1, mark=0, size="140px",he
         case 2:
             content = (
                 <div>
-                    {img && <img src={img} className="sidepic" style={{float: 'right', height: size}}/>}
+                    {img && <img src={img} alt="" className="sidepic" style={{float: 'right', height: size}}/>}
 
                     <div className="vertical" style={{float: "left", writingMode: 'vertical-lr'}}>
                         <div className="subtitle" style={{height: height}}>{title}</div>
@@ -52,8 +50,9 @@ const TextBlock = ({title="", text=[""], img="", mode=1, mark=0, size="140px",he
                 </div>
             );
             break;
-    }
-    ;
+        default:
+            break;
+    };
 
     return (
         <div className="block" style={{height: height}}>

@@ -1,8 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
-import TextBlock from "./TextBlock";
+import React, {useState} from 'react';
 import EachPages from "./EachPages";
 import {motion} from "framer-motion";
-import {Route} from "react-router-dom";
 import {returnCover, viewBook} from "./AnimationSet";
 
 const FlipPage = ({pageIndex, front, back, nowPage, setNowPage}) => {
@@ -40,12 +38,12 @@ const Book = () => {
         <motion.div variants={viewBook} initial="initial" animate="animate" exit="exit" className="book">
             <div className="bookpage" style={{marginLeft: nowPage[1] ? '-800px' : '0px'}}>
                 <FlipPage pageIndex={1}
-                          front={<img src="/ClubJournal/pic/frontcover.png" style={{width: '182mm', height: '257mm'}}/>}
+                          front={<img src="/ClubJournal/pic/frontcover.png" alt="" style={{width: '182mm', height: '257mm'}}/>}
                           back={<EachPages page={0}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
                 <FlipPage pageIndex={2}
-                          front={<img src="/ClubJournal/pic/nijigakugo/poster.png" style={{width: '182mm', height: '257mm'}}/>}
+                          front={<img src="/ClubJournal/pic/nijigakugo/poster.png" alt="" style={{width: '182mm', height: '257mm'}}/>}
                           back={<EachPages page={3}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
@@ -56,7 +54,7 @@ const Book = () => {
                 />
                 <FlipPage pageIndex={4}
                           front={<EachPages page={2}/>}
-                          back={<img src="/ClubJournal/pic/backcover.png" style={{width: '182mm', height: '257mm'}}/>}
+                          back={<img src="/ClubJournal/pic/backcover.png" alt="" style={{width: '182mm', height: '257mm'}}/>}
                           nowPage={nowPage} setNowPage={setNowPage}
                 />
                 {Array.from({length: 0}, (_, index) => (
